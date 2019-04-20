@@ -1,0 +1,373 @@
+@import url(../../_mm/reset.less);
+
+body {
+    padding-bottom: 50px;
+}
+
+.gray {
+    background-color: @col_gray  !important;
+}
+
+.nav {
+    width: 100%;
+    height: 44px;
+    background-color: @col_blue;
+    display: flex;
+    overflow: hidden;
+
+    div {
+        flex: 1;
+    }
+
+    .left {
+        flex: 0 1 44px;
+        font-size: 12px;
+        height: 44px;
+        line-height: 44px;
+        color: @col_white;
+        text-align: center;
+
+        span {
+            width: 0;
+            vertical-align: middle;
+            height: 0;
+            font-size: 0;
+            border-width: 11px;
+            border-style: solid;
+            border-color: transparent @col_white transparent transparent;
+        }
+    }
+
+    .middle {
+        font-size: 14px;
+        line-height: 44px;
+    }
+
+    .right {
+        flex: 0 1 44px;
+        font-size: 40px;
+        height: 44px;
+        line-height: 40px;
+        color: @col_white;
+        text-align: center;
+        transform: rotate(45deg);
+    }
+}
+
+.cardlistbox {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-bottom: 10px solid @col_gray;
+
+    .vip {
+        width: 100%;
+        font-size: 14px;
+        height: 34px;
+        line-height: 34px;
+        color: @col_333;
+    }
+
+    .cardlist {
+        width: 100%;
+        height: 75px;
+        border-radius: 10px;
+        box-shadow: 0px 1px 8px @col_000;
+        margin-bottom: 10px;
+        overflow: hidden;
+
+        p:nth-child(1) {
+            font-size: 14px;
+            height: 30px;
+            line-height: 30px;
+            background-color: @col_blue;
+            color: @col_white;
+            font-family: MFLiHei_Noncommercial-Regular;
+        }
+
+        p:nth-child(2) {
+            font-size: 16px;
+            height: 45px;
+            line-height: 45px;
+            background-color: @col_gold;
+            color: @col_white;
+            font-family: MFLiHei_Noncommercial-Regular;
+            text-align: left;
+            text-indent: 40px;
+
+            span {
+                float: right;
+                font-size: 14px;
+                margin-right: 40px;
+                text-indent: 0;
+            }
+        }
+    }
+
+    .cardlistY {
+        width: 100%;
+        height: 75px;
+        border-radius: 10px;
+        box-shadow: 0px 1px 8px @col_000;
+        margin-bottom: 10px;
+        overflow: hidden;
+        position: relative;
+
+        p:nth-child(1) {
+            font-size: 14px;
+            height: 30px;
+            line-height: 30px;
+            background-color: @col_blue;
+            color: @col_white;
+            font-family: MFLiHei_Noncommercial-Regular;
+        }
+
+        p:nth-child(2) {
+            font-size: 12px;
+            height: 22px;
+            line-height: 22px;
+            background-color: @col_ccc;
+            color: @col_white;
+            font-family: MFLiHei_Noncommercial-Regular;
+            text-align: left;
+            text-indent: 40px;
+        }
+
+        p:nth-child(3) {
+            font-size: 12px;
+            height: 23px;
+            line-height: 23px;
+            background-color: @col_ccc;
+            color: @col_white;
+            font-family: MFLiHei_Noncommercial-Regular;
+            text-align: left;
+            text-indent: 40px;
+            position: relative;
+        }
+
+        span {
+            position: absolute;
+            top: 40px;
+            right: 20px;
+            padding: 6px;
+            font-size: 12px;
+            background-color: @col_white;
+            color: @col_gold;
+            border-radius: 5px;
+            box-shadow: 0 1px 8px @col_aaa;
+        }
+    }
+}
+
+.cardlistboxY {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-bottom: 10px solid @col_gray;
+
+    .vip {
+        width: 100%;
+        font-size: 14px;
+        height: 34px;
+        line-height: 34px;
+        color: @col_333;
+    }
+
+    .cardlist {
+        width: 100%;
+        height: 75px;
+        border-radius: 10px;
+        box-shadow: 0px 1px 8px @col_000;
+        margin-bottom: 10px;
+        overflow: hidden;
+        position: relative;
+
+        p:nth-child(1) {
+            font-size: 14px;
+            height: 30px;
+            line-height: 30px;
+            background-color: @col_blue;
+            color: @col_white;
+            font-family: MFLiHei_Noncommercial-Regular;
+        }
+
+        p:nth-child(2) {
+            font-size: 16px;
+            height: 45px;
+            line-height: 45px;
+            background-color: @col_ccc;
+            color: @col_white;
+            font-family: MFLiHei_Noncommercial-Regular;
+            text-align: left;
+            text-indent: 40px;
+
+            span {
+                position: absolute;
+                top: 40px;
+                right: 20px;
+                width: 60px;
+                height: 24px;
+                line-height: 24px;
+                font-size: 12px;
+                text-align: center;
+                text-indent: 0px;
+                background-color: @col_white;
+                color: @col_gold;
+                box-sizing: border-box;
+                border-radius: 5px;
+                box-shadow: 0 1px 8px @col_aaa;
+            }
+        }
+    }
+
+    .cardlistY {
+        width: 100%;
+        height: 75px;
+        border-radius: 10px;
+        box-shadow: 0px 1px 8px @col_000;
+        margin-bottom: 10px;
+        overflow: hidden;
+        position: relative;
+
+        p:nth-child(1) {
+            font-size: 14px;
+            height: 30px;
+            line-height: 30px;
+            background-color: @col_blue;
+            color: @col_white;
+            font-family: MFLiHei_Noncommercial-Regular;
+        }
+
+        p:nth-child(2) {
+            font-size: 12px;
+            height: 22px;
+            line-height: 22px;
+            background-color: @col_ccc;
+            color: @col_white;
+            font-family: MFLiHei_Noncommercial-Regular;
+            text-align: left;
+            text-indent: 40px;
+        }
+
+        p:nth-child(3) {
+            font-size: 12px;
+            height: 23px;
+            line-height: 23px;
+            background-color: @col_ccc;
+            color: @col_white;
+            font-family: MFLiHei_Noncommercial-Regular;
+            text-align: left;
+            text-indent: 40px;
+            position: relative;
+        }
+
+        span {
+            position: absolute;
+            top: 40px;
+            right: 20px;
+            padding: 6px;
+            font-size: 12px;
+            background-color: @col_white;
+            color: @col_gold;
+            border-radius: 5px;
+            box-shadow: 0 1px 8px @col_aaa;
+        }
+    }
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: @col_gray;
+    display: flex;
+
+    div {
+        flex: 1;
+        padding: 5px 0;
+
+        img {
+            width: 26px;
+            height: 26px;
+        }
+
+        p {
+            color: @col_333;
+            margin-top: 3px;
+        }
+
+        .col_blue {
+            color: @col_blue;
+        }
+    }
+}
+
+
+// deal_info
+.deal_info {
+    color: @col_666;
+    text-align: left;
+    text-indent: 10px;
+
+    div {
+        width: 100%;
+        height: 44px;
+        line-height: 44px;
+        font-size: 12px;
+        border-bottom: 1px solid @col_gray;
+        position: relative;
+
+        span {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 60px;
+            height: 24px;
+            line-height: 24px;
+            text-indent: 0;
+            text-align: center;
+            background-color: @col_blue;
+            color: @col_white;
+            border-radius: 6px;
+        }
+    }
+}
+
+.photo {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 0 20px 10px;
+
+    div {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        color: @col_666;
+        font-size: 14px;
+        background: @col_gray;
+
+        input {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 0;
+            opacity: 0;
+        }
+    }
+}
+.enter{
+    width: 90%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    border-radius: 6px;
+    margin: auto;
+    box-sizing: border-box;
+    background-color: @col_blue;
+    color: @col_white;
+}

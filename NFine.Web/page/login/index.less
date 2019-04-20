@@ -1,0 +1,259 @@
+@import url(../../_mm/reset.less);
+
+
+body {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+a{
+    color:#fff;
+}
+
+.share_txt {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    font-size: 16px;
+    color: @col_white;
+    margin: auto;
+}
+
+.share_X {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 60px;
+    color: @col_white;
+    transform: rotate(45deg);
+    margin: auto;
+}
+
+.bg {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    top: 90px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.res_logo {
+    position: absolute;
+    width: 260px;
+    height: 100px;
+    top: 70px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.list_box {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 240px;
+
+    div {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        margin-bottom: 20px;
+        border-radius: 6px;
+    }
+
+    .phone {
+        background-color: rgba(255, 255, 255, 0.4);
+        text-align: left;
+
+        .phone_pic {
+            width: 17px;
+            height: 25px;
+            margin-left: 9px;
+            margin-top: 7px;
+            vertical-align: top;
+        }
+
+        .psd_pic {
+            width: 20px;
+            height: 24px;
+            margin-left: 9px;
+            margin-top: 7px;
+            vertical-align: top;
+        }
+
+        input {
+            height: 38px;
+            border: none;
+            outline: 0;
+            background-color: rgba(0, 0, 0, 0);
+            text-indent: 8px;
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, .8);
+        }
+    }
+
+    .login {
+        background-color: @col_white;
+        color: @col_blue;
+        font-size: 16px;
+        position: relative;
+        margin-bottom: 0;
+
+        .resetpsd {
+            position: absolute;
+            top: 40px;
+            text-align: left;
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+}
+
+.res_list_box {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 170px;
+
+    div {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        margin-bottom: 20px;
+        border-radius: 6px;
+    }
+
+    .phone {
+        background-color: rgba(255, 255, 255, 0.4);
+        text-align: left;
+
+        .phone_pic {
+            width: 17px;
+            height: 25px;
+            margin-left: 9px;
+            margin-top: 7px;
+            vertical-align: top;
+        }
+        .share_num::placeholder{
+        	color: @col_gold;
+        }
+
+        .psd_pic {
+            width: 20px;
+            height: 24px;
+            margin-left: 9px;
+            margin-top: 7px;
+            vertical-align: top;
+        }
+
+        .share_pic {
+            width: 20px;
+            height: 20px;
+            margin-left: 9px;
+            margin-top: 7px;
+            vertical-align: top;
+        }
+
+        input {
+            height: 38px;
+            border: none;
+            outline: 0;
+            background-color: rgba(0, 0, 0, 0);
+            text-indent: 8px;
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, .8);
+        }
+    }
+
+    .proving {
+        width: 100%px;
+        position: relative;
+        display: flex;
+        .psd_pic{
+            flex: 0 1 20px;
+        }
+
+        input {
+            width: 100px;
+            flex: 1;
+        }
+
+        .get_prv {
+            flex: 1;
+            width: 110px;
+            height: 40px;
+            line-height: 40px;
+            right: 0;
+            background-color: @col_white;
+            color: @col_blue;
+            font-size: 16px;
+            text-align: center;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
+        .verify_pic{
+            flex: 1;
+        }
+    }
+
+    .login {
+        background-color: @col_white;
+        color: @col_blue;
+        font-size: 16px;
+        position: relative;
+        margin-bottom: 0;
+
+        .resetpsd {
+            position: absolute;
+            top: 40px;
+            text-align: left;
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+}
+.btm{
+	position: fixed;
+	width: 100%;
+	height: 46px;
+	line-height: 46px;
+	font-size: 16px;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	background-color: rgba(0,0,0,.4);
+	div{
+		flex: 1;
+		img{
+			width: 25px;
+			height: 29px;
+			vertical-align: middle;
+		}
+	}
+	div:nth-child(1){
+		background-color: rgba(255,255,255,.4);
+	}
+	div:nth-child(3){
+		background-color: rgba(255,255,255,.4);
+	}
+}

@@ -1,0 +1,98 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+
+
+<script src="~/ueditor/ueditor.config.js"></script>
+<script src="~/ueditor/ueditor.all.min.js"></script>
+<script src="~/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript">
+    //实例化编辑器
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    var ue = UE.getEditor('F_Content');
+</script>
+<style>
+    .simditor {
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+</style>
+<script>
+    var keyValue = $.request("keyValue");
+    $(function () {
+        $(".mail-header").html("发布");
+        if (!!keyValue) {
+            $(".mail-header").html("修改");
+            $.ajax({
+                url: "/UserCenter/News/GetFormJson",
+                data: { keyValue: keyValue },
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    $("#form1").formSerialize(data);
+                }
+            });
+        }
+    });
+    function submitForm() {
+        if (!$('#form1').formValid()) {
+            return false;
+        }
+        $.submitForm({
+            loading: "正在保存...",
+            url: "/UserCenter/News/SubmitForm?keyValue=" + keyValue,
+            param: $("#form1").formSerialize(),
+            success: function () {
+                location.href = "/UserCenter/News/Index";
+            }
+        })
+    }
+</script>
+<form id="form1">
+    <div class="mail-box">
+        <div class="mail-header"></div>
+        <div class="mail-body">
+            <table class="form">
+                <tr>
+                    <th class="formTitle">标题</th>
+                    <td class="formValue">
+                        <input id="F_Title" name="F_Title" type="text" class="form-control required" placeholder="输入多个邮件地址请用英文符号;隔开" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="formTitle">作者</th>
+                    <td class="formValue">
+                        <input id="F_Author" name="F_Author" type="text" class="form-control required" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="formTitle">文章类型</th>
+                    <td class="formValue">
+                        <select name="F_Type" id="F_Type" class="form-control required">
+                            <option value="0">请选择</option>
+                            <option value="1">系统公告</option>
+                            <option value="2">文章资讯</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th class="formTitle">内容</th>
+                    <td class="formValue">
+                        <script id="F_Content" name="F_Content" type="text/plain" style="width:1024px;height:500px;">
+                        </script>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th class="formTitle"></th>
+                    <td class="formValue">
+                        <a href="javascript:void()" onclick="submitForm()" class="btn btn-primary" style="margin-right: 5px;">保存</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</form>

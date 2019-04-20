@@ -1,0 +1,127 @@
+﻿@{
+    ViewBag.Title = "Form";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+<script>
+    var keyValue = $.request("keyValue");
+    $(function () {
+        initControl();
+        if (!!keyValue) {
+            $.ajax({
+                url: "/UserCenter/UserVip/GetFormJson",
+                data: { keyValue: keyValue },
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    $("#form1").formSerialize(data);
+                    $("#F_UserPassword").val("******").attr('disabled', 'disabled');
+                }
+            });
+        }
+    });
+    function initControl() {
+        $("#F_Gender").bindSelect()
+        $("#F_IsAdministrator").bindSelect()
+        $("#F_EnabledMark").bindSelect()
+        $("#F_OrganizeId").bindSelect({
+            url: "/SystemManage/Organize/GetTreeSelectJson"
+        });
+        $("#F_DepartmentId").bindSelect({
+            url: "/SystemManage/Organize/GetTreeSelectJson",
+        });
+        $("#F_RoleId").bindSelect({
+            url: "/SystemManage/Role/GetGridJson",
+            id: "F_Id",
+            text: "F_FullName"
+        });
+        $("#F_DutyId").bindSelect({
+            url: "/SystemManage/Duty/GetGridJson",
+            id: "F_Id",
+            text: "F_FullName"
+        });
+    }
+    function submitForm() {
+        if (!$('#form1').formValid()) {
+            return false;
+        }
+        $.submitForm({
+            url: "/UserCenter/UserVip/SubmitForm?keyValue=" + keyValue,
+            param: $("#form1").formSerialize(),
+            success: function () {
+                $.currentWindow().$("#gridList").trigger("reloadGrid");
+            }
+        })
+    }
+</script>
+<form id="form1">
+    <div style="margin-top: 10px; margin-left: 10px; margin-right: 10px;">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#">基本信息</a></li>
+            @*<li ><a href="#">扩展信息</a></li>*@
+        </ul>
+        <div style="padding-top: 20px; margin-right: 30px;">
+            <table class="form">
+                <tr>
+                    <th class="formTitle">账户</th>
+                    <td class="formValue">
+                        <input id="F_Account" name="F_Account" type="text" class="form-control required" placeholder="请输入账户" />
+                    </td>
+                    <th class="formTitle">手机</th>
+                    <td class="formValue">
+                        <input id="F_Mobile" name="F_Mobile" type="text" class="form-control required" placeholder="请输入手机" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="formTitle">昵称</th>
+                    <td class="formValue">
+                        <input id="F_NickName" name="F_NickName" type="text" class="form-control required" placeholder="" />
+                    </td>
+                    <th class="formTitle">可用糖果</th>
+                    <td class="formValue">
+                        <input id="F_Coin" name="F_Coin" type="text" class="form-control required" placeholder="" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="formTitle">冻结糖果</th>
+                    <td class="formValue">
+                        <input id="F_LockCoin" name="F_LockCoin" type="text" class="form-control" placeholder="" />
+                    </td>
+                    <th class="formTitle">私募糖果</th>
+                    <td class="formValue">
+                        <input id="F_PrivateCoin" name="F_PrivateCoin" type="text" class="form-control" placeholder="" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="formTitle">银行名称</th>
+                    <td class="formValue">
+                        <input id="F_BankName" name="F_BankName" type="text" class="form-control" placeholder="" />
+                    </td>
+                    <th class="formTitle">银行卡号</th>
+                    <td class="formValue">
+                        <input id="F_CardNo" name="F_CardNo" type="text" class="form-control" placeholder="" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="formTitle">支付宝</th>
+                    <td class="formValue">
+                        <input id="F_Apliay" name="F_Apliay" type="text" class="form-control" placeholder="" />
+                    </td>
+                    <th class="formTitle">微信</th>
+                    <td class="formValue">
+                        <input id="F_WeiXin" name="F_WeiXin" type="text" class="form-control" placeholder="" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="formTitle">姓名</th>
+                    <td class="formValue">
+                        <input id="F_TureName" name="F_TureName" type="text" class="form-control" placeholder="" />
+                    </td>
+                    <th class="formTitle">钱包地址</th>
+                    <td class="formValue">
+                        <input id="F_PurseAddress" name="F_PurseAddress" type="text" class="form-control " placeholder="" />
+                    </td>
+                </tr>
+          </table>
+        </div>
+    </div>
+</form>
