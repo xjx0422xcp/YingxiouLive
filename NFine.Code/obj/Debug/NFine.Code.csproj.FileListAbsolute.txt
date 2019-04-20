@@ -80,6 +80,5 @@ F:\Project\YingxiouLive\NFine.Code\bin\Debug\Newtonsoft.Json.xml
 F:\Project\YingxiouLive\NFine.Code\bin\Debug\NPOI.xml
 F:\Project\YingxiouLive\NFine.Code\bin\Debug\NPOI.OOXML.xml
 F:\Project\YingxiouLive\NFine.Code\bin\Debug\NPOI.OpenXml4Net.xml
-F:\Project\YingxiouLive\NFine.Code\obj\Debug\NFine.Code.csprojResolveAssemblyReference.cache
 F:\Project\YingxiouLive\NFine.Code\obj\Debug\NFine.Code.dll
 F:\Project\YingxiouLive\NFine.Code\obj\Debug\NFine.Code.pdb
