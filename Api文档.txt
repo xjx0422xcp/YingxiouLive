@@ -10,3 +10,16 @@ url:http://103.205.6.57:8091/
 		msg:""
 		data:"101010"
 	}
+	
+
+登录
+	app/CheckLogin
+参数
+	username:6
+	password:123456
+返回数据
+	{
+		code:0;//0 代表成功， 不是0，弹出msg
+		msg:""
+		data:{}
+	}
