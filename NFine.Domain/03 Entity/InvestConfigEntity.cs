@@ -18,14 +18,14 @@ namespace NFine.Domain.Entity.InvestConfig
     /// <summary>
     /// InvestConfig Entity Model
     /// </summary>
-    public class InvestConfigEntity : IEntity<InvestConfigEntity>, ICreationAudited, IDeleteAudited, IModificationAudited
+    public class InvestConfigEntity : IEntity<InvestConfigEntity>, ICreationAudited, IModificationAudited
     {
-						public  String  F_Id { get; set; }
-					public  Decimal?  F_Money { get; set; }
-					public  Int32?  F_VCoin { get; set; }
-					public  DateTime?  F_CreatorTime { get; set; }
-					public  String  F_CreatorUserId { get; set; }
-					public  DateTime?  F_LastModifyTime { get; set; }
-					public  String  F_LastModifyUserId { get; set; }
-		    }
+        public String F_Id { get; set; }
+        public Decimal? F_Money { get; set; }
+        public Int32? F_VCoin { get; set; }
+        public DateTime? F_CreatorTime { get; set; }
+        public String F_CreatorUserId { get; set; }
+        public DateTime? F_LastModifyTime { get; set; }
+        public String F_LastModifyUserId { get; set; }
+    }
 }
