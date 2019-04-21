@@ -50,6 +50,7 @@
     <Compile Include="02 ViewModel\UserVipActionModel.cs" />
     <Compile Include="02 ViewModel\UvrActionModel.cs" />
     <Compile Include="03 Entity\GiftEntity.cs" />
+    <Compile Include="03 Entity\InvestConfigEntity.cs" />
     <Compile Include="03 Entity\NewsEntity.cs" />
     <Compile Include="03 Entity\OrderEntity.cs" />
     <Compile Include="03 Entity\OrderItemEntity.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="03 Entity\WealthLogEntity.cs" />
     <Compile Include="03 Entity\WithdrawEntity.cs" />
     <Compile Include="04 IRepository\IGiftRepository.cs" />
+    <Compile Include="04 IRepository\IInvestConfigRepository.cs" />
     <Compile Include="04 IRepository\INewsRepository.cs" />
     <Compile Include="04 IRepository\IOrderItemRepository.cs" />
     <Compile Include="04 IRepository\IOrderRepository.cs" />

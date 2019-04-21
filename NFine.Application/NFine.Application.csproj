@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="01 Infrastructure\DbLogType.cs" />
     <Compile Include="GiftApp.cs" />
+    <Compile Include="InvestConfigApp.cs" />
     <Compile Include="NewsApp.cs" />
     <Compile Include="OrderApp.cs" />
     <Compile Include="OrderItemApp.cs" />
