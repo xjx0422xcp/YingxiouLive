@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GiftRepository.cs" />
     <Compile Include="NewsRepository.cs" />
     <Compile Include="OrderItemRepository.cs" />
     <Compile Include="OrderRepository.cs" />
