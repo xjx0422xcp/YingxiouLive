@@ -9,7 +9,7 @@
 //-----------------------------------------------------------------------
 using NFine.Domain.Entity.InvestConfig;
 using NFine.Domain.IRepository.InvestConfig;
-using NFine.Repository.InvestConfig;
+using System.Data.Entity.ModelConfiguration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,8 +20,8 @@ namespace NFine.Mapping.InvestConfig
     {
 		 public InvestConfigMap()
         {
-            this.ToTable("InvestConfig");
-            this.HasKey(t => t.ID);
+            this.ToTable("Sys_Invest_Config");
+            this.HasKey(t => t.F_Id);
         }
     }
 }
