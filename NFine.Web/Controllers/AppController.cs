@@ -1,4 +1,5 @@
-﻿using NFine.Application.News;
+﻿using NFine.Application.InvestConfig;
+using NFine.Application.News;
 using NFine.Application.Order;
 using NFine.Application.OrderItem;
 using NFine.Application.UserSign;
@@ -8,6 +9,7 @@ using NFine.Application.WealthLog;
 using NFine.Application.Withdraw;
 using NFine.Code;
 using NFine.Domain.Entity;
+using NFine.Domain.Entity.InvestConfig;
 using NFine.Domain.Entity.UserSign;
 using NFine.Domain.ViewModel;
 using System;
@@ -34,6 +36,8 @@ namespace NFine.Web.Controllers
         private UserSignApp usApp = new UserSignApp();
         private NewsApp newsApp = new NewsApp();
         private log4net.ILog log = log4net.LogManager.GetLogger("AppController");
+
+        private InvestConfigApp investConfigApp = new InvestConfigApp();
         //
         // GET: /App/
         #region index
@@ -1786,6 +1790,26 @@ namespace NFine.Web.Controllers
         }
 
         #endregion
+
+        public JsonResult GetInvestConfigList()
+        {
+            int code = 0;
+            string msg = "";
+            List<InvestConfigEntity> investConfigList = investConfigApp.GetInvestConfigList(8);
+            var result = new
+            {
+                code = code,
+                msg = msg,
+                data = investConfigList.Select(x => new
+                {
+                    x.F_Id,//数量
+                    x.F_VCoin,//
+                    x.F_Money,
+                    F_CreatorTime = ((DateTime)x.F_CreatorTime).ToString("yyyy-MM-dd HH:mm"),
+                })
+            };
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
 
     }
 }

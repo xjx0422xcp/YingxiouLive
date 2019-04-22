@@ -37,6 +37,12 @@ namespace NFine.Application.InvestConfig
             return service.FindEntity(keyValue);
         }
 
+        public List<InvestConfigEntity> GetInvestConfigList(int count)
+        {
+            var expression = ExtLinq.True<InvestConfigEntity>();
+            return service.IQueryable(expression).Take(count).OrderBy(t => t.F_CreatorTime).ToList();
+        }
+
         public void Delete(InvestConfigEntity entity)
         {
             service.Delete(entity);
