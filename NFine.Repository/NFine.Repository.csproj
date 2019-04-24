@@ -58,6 +58,8 @@
     <Compile Include="SystemSecurity\DbBackupRepository.cs" />
     <Compile Include="SystemSecurity\FilterIPRepository.cs" />
     <Compile Include="SystemSecurity\LogRepository.cs" />
+    <Compile Include="UserFansRepository.cs" />
+    <Compile Include="UserInvestRepository.cs" />
     <Compile Include="UserSignRepository.cs" />
     <Compile Include="UserVipRankingRepository.cs" />
     <Compile Include="UserVipRepository.cs" />

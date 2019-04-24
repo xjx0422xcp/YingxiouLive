@@ -283,9 +283,7 @@ F:\Project\YingxiouLive\NFine.Web\bin\zh-Hans\System.Web.WebPages.Razor.resource
 F:\Project\YingxiouLive\NFine.Web\obj\Debug\NFine.Web.csprojResolveAssemblyReference.cache
 F:\Project\YingxiouLive\NFine.Web\obj\Debug\NFine.Web.dll
 F:\Project\YingxiouLive\NFine.Web\obj\Debug\NFine.Web.pdb
-E:\YH\NowJob\z直播\web-NFine-github-0424\NFine.Web\obj\Debug\NFine.Web.csprojResolveAssemblyReference.cache
-E:\YH\NowJob\z直播\web-NFine-github-0424\NFine.Web\obj\Debug\NFine.Web.dll
-E:\YH\NowJob\z直播\web-NFine-github-0424\NFine.Web\obj\Debug\NFine.Web.pdb
+E:\YH\NowJob\z直播\web-NFine-github-0424\NFine.Web\bin\NFine.Mapping.dll
 E:\YH\NowJob\z直播\web-NFine-github-0424\NFine.Web\bin\NFine.Web.dll.config
 E:\YH\NowJob\z直播\web-NFine-github-0424\NFine.Web\bin\NFine.Web.dll
 E:\YH\NowJob\z直播\web-NFine-github-0424\NFine.Web\bin\NFine.Web.pdb
@@ -298,7 +296,6 @@ E:\YH\NowJob\z直播\web-NFine-github-0424\NFine.Web\bin\NFine.Application.dll
 E:\YH\NowJob\z直播\web-NFine-github-0424\NFine.Web\bin\NFine.Code.dll
 E:\YH\NowJob\z直播\web-NFine-github-0424\NFine.Web\bin\NFine.Data.dll
 E:\YH\NowJob\z直播\web-NFine-github-0424\NFine.Web\bin\NFine.Domain.dll
-E:\YH\NowJob\z直播\web-NFine-github-0424\NFine.Web\bin\NFine.Mapping.dll
 E:\YH\NowJob\z直播\web-NFine-github-0424\NFine.Web\bin\System.Net.Http.Formatting.dll
 E:\YH\NowJob\z直播\web-NFine-github-0424\NFine.Web\bin\System.Web.Helpers.dll
 E:\YH\NowJob\z直播\web-NFine-github-0424\NFine.Web\bin\System.Web.Http.dll
@@ -340,3 +337,6 @@ E:\YH\NowJob\z直播\web-NFine-github-0424\NFine.Web\bin\zh-Hans\System.Web.Razo
 E:\YH\NowJob\z直播\web-NFine-github-0424\NFine.Web\bin\zh-Hans\System.Web.WebPages.resources.dll
 E:\YH\NowJob\z直播\web-NFine-github-0424\NFine.Web\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 E:\YH\NowJob\z直播\web-NFine-github-0424\NFine.Web\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+E:\YH\NowJob\z直播\web-NFine-github-0424\NFine.Web\obj\Debug\NFine.Web.csprojResolveAssemblyReference.cache
+E:\YH\NowJob\z直播\web-NFine-github-0424\NFine.Web\obj\Debug\NFine.Web.dll
+E:\YH\NowJob\z直播\web-NFine-github-0424\NFine.Web\obj\Debug\NFine.Web.pdb
