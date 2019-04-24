@@ -138,6 +138,8 @@
     <Compile Include="Areas\ExampleManage\Controllers\SendMessagesController.cs" />
     <Compile Include="Areas\ExampleManage\Controllers\SignetController.cs" />
     <Compile Include="Areas\ExampleManage\ExampleManageAreaRegistration.cs" />
+    <Compile Include="Areas\LivePlatform\Controllers\InvestConfigController.cs" />
+    <Compile Include="Areas\LivePlatform\LivePlatformAreaRegistration.cs" />
     <Compile Include="Areas\ReportManage\Controllers\EchartsController.cs" />
     <Compile Include="Areas\ReportManage\Controllers\HighchartsController.cs" />
     <Compile Include="Areas\ReportManage\ReportManageAreaRegistration.cs" />
@@ -162,6 +164,7 @@
     <Compile Include="Areas\UserCenter\UserCenterAreaRegistration.cs" />
     <Compile Include="Controllers\AppController.cs" />
     <Compile Include="Controllers\ClientsDataController.cs" />
+    <Compile Include="Controllers\GetDataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
@@ -2320,6 +2323,8 @@
     <Content Include="Areas\ReportManage\Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Areas\LivePlatform\Models\" />
+    <Folder Include="Areas\LivePlatform\Views\Shared\" />
     <Folder Include="Areas\ReportManage\Views\Echarts\" />
     <Folder Include="Areas\UserCenter\Models\" />
     <Folder Include="Theme\plugins\jquery-file-upload\server\php\files\thumbnail\" />
@@ -2397,6 +2402,9 @@
     <Content Include="Areas\UserCenter\Views\UserVip\Index.cshtml" />
     <Content Include="Areas\UserCenter\Views\UserVip\Info.cshtml" />
     <Content Include="Areas\UserCenter\Views\UserVip\RevisePassword.cshtml" />
+    <Content Include="Areas\LivePlatform\Views\InvestConfig\Form1.cshtml" />
+    <Content Include="Areas\LivePlatform\Views\InvestConfig\Index.cshtml" />
+    <Content Include="Areas\LivePlatform\Views\Web.config" />
     <None Include="Properties\PublishProfiles\ex.pubxml" />
     <None Include="Properties\PublishProfiles\NFine.Framework.Release.pubxml" />
     <Content Include="_mm\reset.less" />

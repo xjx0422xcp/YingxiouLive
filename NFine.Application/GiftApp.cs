@@ -19,8 +19,12 @@ namespace NFine.Application.Gift
     public class GiftApp
     {
 		private IGiftRepository service = new GiftRepository();
-
-		public List<GiftEntity> GetList(Pagination pagination, string queryJson)
+        public List<GiftEntity> GetGiftList(int count)
+        {
+            var expression = ExtLinq.True<GiftEntity>();
+            return service.IQueryable(expression).Take(count).OrderBy(t => t.F_CreatorTime).ToList();
+        }
+        public List<GiftEntity> GetList(Pagination pagination, string queryJson)
         {
 		    var expression = ExtLinq.True<GiftEntity>();
             var queryParam = queryJson.ToJObject();
