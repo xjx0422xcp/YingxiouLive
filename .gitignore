@@ -1,0 +1,12 @@
+/NFine.Code/obj
+/NFine.Code/bin
+/NFine.Code/*
+/NFine.Data/*
+/NFine.Data/obj
+/NFine.Data/bin
+/NFine.Domain/obj
+/NFine.Domain/bin
+/NFine.Application/bin
+/NFine.Application/obj
+/NFine.Mapping/obj
+/NFine.Mapping/bin
