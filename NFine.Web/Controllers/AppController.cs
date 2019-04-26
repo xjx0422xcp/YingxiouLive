@@ -815,8 +815,8 @@ namespace NFine.Web.Controllers
                 userVipApp.SubmitForm(userVipEntity, userVipEntity.F_Id);
             }
             else
-            {
-                code = 1;
+            { 
+                code = 1; 
                 msg = "原密码不对";
             }
             return Json(new
