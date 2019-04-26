@@ -64,6 +64,8 @@
     <Compile Include="03 Entity\SystemSecurity\FilterIPEntity.cs" />
     <Compile Include="03 Entity\SystemSecurity\LogEntity.cs" />
     <Compile Include="02 ViewModel\AuthorizeActionModel.cs" />
+    <Compile Include="03 Entity\UserFansEntity.cs" />
+    <Compile Include="03 Entity\UserInvestEntity.cs" />
     <Compile Include="03 Entity\UserSignEntity.cs" />
     <Compile Include="03 Entity\UserVipRankingEntity.cs" />
     <Compile Include="03 Entity\UserCenter\UserVipEntity.cs" />
@@ -75,6 +77,8 @@
     <Compile Include="04 IRepository\INewsRepository.cs" />
     <Compile Include="04 IRepository\IOrderItemRepository.cs" />
     <Compile Include="04 IRepository\IOrderRepository.cs" />
+    <Compile Include="04 IRepository\IUserFansRepository.cs" />
+    <Compile Include="04 IRepository\IUserInvestRepository.cs" />
     <Compile Include="04 IRepository\IUserSignRepository.cs" />
     <Compile Include="04 IRepository\IUserVipRankingRepository.cs" />
     <Compile Include="04 IRepository\IUserVipRepository.cs" />

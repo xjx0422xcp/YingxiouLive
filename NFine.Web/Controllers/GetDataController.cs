@@ -3,6 +3,8 @@ using NFine.Application.InvestConfig;
 using NFine.Application.News;
 using NFine.Application.Order;
 using NFine.Application.OrderItem;
+using NFine.Application.UserFans;
+using NFine.Application.UserInvest;
 using NFine.Application.UserSign;
 using NFine.Application.UserVip;
 using NFine.Application.UserVipRanking;
@@ -12,6 +14,8 @@ using NFine.Code;
 using NFine.Domain.Entity;
 using NFine.Domain.Entity.Gift;
 using NFine.Domain.Entity.InvestConfig;
+using NFine.Domain.Entity.UserFans;
+using NFine.Domain.Entity.UserInvest;
 using NFine.Domain.Entity.UserSign;
 using NFine.Domain.ViewModel;
 using System;
@@ -37,9 +41,14 @@ namespace NFine.Web.Controllers
         private UserSignApp usApp = new UserSignApp();
         private NewsApp newsApp = new NewsApp();
         private log4net.ILog log = log4net.LogManager.GetLogger("AppController");
+
+
         private InvestConfigApp investConfigApp = new InvestConfigApp();
         private GiftApp giftApp = new GiftApp();
+        private UserFansApp userFansApp = new UserFansApp();
+        private UserInvestApp userInvestApp = new UserInvestApp();
 
+        //充值配置
         #region ===============获取充值秀豆配置列表 8条
         //   [HttpPost]
         public JsonResult GetInvestConfigList(int count)
@@ -147,7 +156,7 @@ namespace NFine.Web.Controllers
         }
         #endregion
 
-
+        //礼物配置
         #region ===============获取礼物秀豆配置列表 
         //   [HttpPost]
         public JsonResult GetGiftList(int count)
@@ -232,7 +241,7 @@ namespace NFine.Web.Controllers
         #endregion
 
         #region ===============修改充值礼物配置列表
-        //    [HttpPost]
+        //[HttpPost]
         public JsonResult UpdateGift(GiftEntity model)
         {
             int code = 0;
@@ -261,11 +270,120 @@ namespace NFine.Web.Controllers
         }
         #endregion
 
+        //关注配置
+        #region ===============新增关注
+        public JsonResult SetUserFans(UserFansEntity model)
+        {
+            int code = 0;
+            string msg = "";
+            string data = "";
+            UserFansEntity entity = new UserFansEntity()
+            {
+                F_UserID = model.F_UserID,
+                F_ReferID = model.F_ReferID,
+                //F_CreatorTime = DateTime.Now,
+                //F_CreatorUserId = model.F_CreatorUserId,
+                //F_LastModifyTime = DateTime.Now,
+                //F_LastModifyUserId = "",
+                //F_Id = ""
+            };
+            userFansApp.SubmitForm(entity, entity.F_Id);
+            return Json(new
+            {
+                code = code,
+                msg = msg,
+                data = data
+            }, JsonRequestBehavior.AllowGet);
+        }
 
+        #endregion
 
+        #region ===============删除关注
+        //    [HttpPost]
+        public JsonResult DelUserFans(UserFansEntity model)
+        {
+            int code = 0;
+            string msg = "";
+            string data = "";
+            UserFansEntity entity = new UserFansEntity()
+            {
+                // F_UserID = model.F_UserID,
+                //  F_ReferID = model.F_ReferID,
+                //F_CreatorTime = DateTime.Now,
+                //F_CreatorUserId = model.F_CreatorUserId,
+                //F_LastModifyTime = DateTime.Now,
+                //F_LastModifyUserId = "",
+                F_Id = model.F_Id
+            };
+            userFansApp.Delete(entity);
+            return Json(new
+            {
+                code = code,
+                msg = msg,
+                data = data
+            }, JsonRequestBehavior.AllowGet);
+        }
+        #endregion
 
+        //充值（订单）
+        #region ===============获取充值列表
+        //   [HttpPost]
+        public JsonResult GetUserInvestList(Pagination paginationModel, string queryJson)
+        {
+            Pagination pagination = new Pagination()
+            {
+                rows = paginationModel.rows,
+                page = paginationModel.page,
+                sidx = paginationModel.sidx,
+                sord = paginationModel.sord,
+                records = paginationModel.records,
+                // total = paginationModel.total,
+            };
+            List<UserInvestEntity> userInvestEntity = userInvestApp.GetList(paginationModel, queryJson);
+            int code = 0;
+            string msg = "";
+            return Json(new
+            {
+                code = code,
+                msg = msg,
+                data = userInvestEntity.Select(x => new
+                {
+                    x.F_OrderNo,
+                    x.F_UserID,
+                    x.F_Money,
+                    x.F_VCoin,
+                    x.F_Status
+                })
+            }, JsonRequestBehavior.AllowGet);
+        }
+        #endregion
 
-
+        #region ===============新增充值秀豆配置
+        //    [HttpPost]
+        public JsonResult SetUserInvest(InvestConfigEntity model)
+        {
+            int code = 0;
+            string msg = "";
+            string data = "";
+            InvestConfigEntity entity = new InvestConfigEntity()
+            {
+                F_Money = model.F_Money,
+                F_VCoin = model.F_VCoin,
+                //F_CreatorTime = DateTime.Now,
+                //F_CreatorUserId = model.F_CreatorUserId,
+                //F_LastModifyTime = DateTime.Now,
+                //F_LastModifyUserId = "",
+                //F_Id = ""
+            };
+            investConfigApp.SubmitForm(entity, entity.F_Id);
+            return Json(new
+            {
+                code = code,
+                msg = msg,
+                data = data
+            }, JsonRequestBehavior.AllowGet);
+        }
+        #endregion
 
         // GET: /App/
         #region index

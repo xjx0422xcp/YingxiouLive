@@ -65,6 +65,8 @@
     <Compile Include="SystemSecurity\DbBackupApp.cs" />
     <Compile Include="SystemSecurity\FilterIPApp.cs" />
     <Compile Include="SystemSecurity\LogApp.cs" />
+    <Compile Include="UserFansApp.cs" />
+    <Compile Include="UserInvestApp.cs" />
     <Compile Include="UserSignApp.cs" />
     <Compile Include="UserVipRankingApp.cs" />
     <Compile Include="UserVipApp.cs" />

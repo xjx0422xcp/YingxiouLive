@@ -138,6 +138,7 @@
     <Compile Include="Areas\ExampleManage\Controllers\SendMessagesController.cs" />
     <Compile Include="Areas\ExampleManage\Controllers\SignetController.cs" />
     <Compile Include="Areas\ExampleManage\ExampleManageAreaRegistration.cs" />
+    <Compile Include="Areas\LivePlatform\Controllers\GiftConfigController.cs" />
     <Compile Include="Areas\LivePlatform\Controllers\InvestConfigController.cs" />
     <Compile Include="Areas\LivePlatform\LivePlatformAreaRegistration.cs" />
     <Compile Include="Areas\ReportManage\Controllers\EchartsController.cs" />
@@ -2176,7 +2177,9 @@
     <Content Include="Configs\system.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configs\database.config" />
+    <Content Include="Configs\database.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NFine.Application\NFine.Application.csproj">
@@ -2405,6 +2408,8 @@
     <Content Include="Areas\LivePlatform\Views\InvestConfig\Form1.cshtml" />
     <Content Include="Areas\LivePlatform\Views\InvestConfig\Index.cshtml" />
     <Content Include="Areas\LivePlatform\Views\Web.config" />
+    <Content Include="Areas\LivePlatform\Views\Gift\Form1.cshtml" />
+    <Content Include="Areas\LivePlatform\Views\Gift\Index.cshtml" />
     <None Include="Properties\PublishProfiles\ex.pubxml" />
     <None Include="Properties\PublishProfiles\NFine.Framework.Release.pubxml" />
     <Content Include="_mm\reset.less" />

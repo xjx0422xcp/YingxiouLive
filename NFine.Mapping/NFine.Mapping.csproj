@@ -67,6 +67,8 @@
     <Compile Include="SystemSecurity\DbBackupMap.cs" />
     <Compile Include="SystemSecurity\FilterIPMap.cs" />
     <Compile Include="SystemSecurity\LogMap.cs" />
+    <Compile Include="UserFansMap.cs" />
+    <Compile Include="UserInvestMap.cs" />
     <Compile Include="UserSignMap.cs" />
     <Compile Include="UserVipRankingMap.cs" />
     <Compile Include="UserVipMap.cs" />
